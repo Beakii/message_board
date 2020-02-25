@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <title>About</title>
+    </head>
+    <body>
+        <!--//////////NAVIGATION BAR//////////-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/logo4.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveNavlist">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse responsiveNavCollapse" id="responsiveNavlist">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="poststatusform.php">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="searchstatusform.html">Search</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--//////////END NAVIGATION BAR//////////-->
+
+        <main>
+        <!--//////////QUESTION & ANSWERS LIST//////////-->
+            <div class="container-fluid">
+                <ul>
+                    <li>
+                        <p class="lead font-weight-bold">What special features have you done, or attempted, in creating the site that we should know about? </p>
+                        <ul>
+                            <li>
+                                <p>I have attempted to use Bootstrap 4 to create this website, along with a service called FontAwesome.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="lead font-weight-bold">Which parts did you have trouble with?</p>
+                        <ul>
+                            <li>
+                                <p>I had particular trouble with writing to/reading from the database through PHP from my home computer. It was only after I put my code on cmslamp that I realized it worked and it was just that I couldnt access the datase through code from my home computer, regardless of RASS ticket being open. I also had trouble with the mobile collapse menu when the screen size is less than 768pixels. I couldnt figure out why the Bootstrap wasn't working, but after some Googling, i found that the issue was I needed to makesure Bootstraps j-query script was called before the Bootstrap CSS script.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="lead font-weight-bold">What would you like to do better next time? </p>
+                        <ul>
+                            <li>
+                                <p>I feel as though some of the PHP code is a little convaluted because it was written while still learning how to do certain things, and this may have lead to unneeded, messy code. I would also prefer not to use Bootstrap again as i found it quite annoying having to manually cancel what Bootstrap was doing, CSS wise, to be able to write my own CSS for a particular element.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="lead font-weight-bold">What references/sources you have used to help you learn how to create your website?</p>
+                        <ul>
+                            <li>
+                                <p><a href="https://www.php.net/manual/en/">PHP Documentation</a>, <a href="https://www.w3schools.com/">w3Schools</a>, <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap Documentation</a> and various <a href="https://www.youtube.come">YouTube</a> videos have been very helpful with the understanding of some of the input validation processess and styling of the webpages along with the handling of MySQL queries with PHP.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p class="lead font-weight-bold">What you have learnt along the way?</p>
+                        <ul>
+                            <li>
+                                <p>I have learnt a considerable amount about Bootstrap and how it works, along with how to create and query a MySQL database with PHP and to validate user input through HTML patterns.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="index.html">Go back to Homepage</a>
+            </div>
+        </main>
+        <!--//////////END QUESTION & ANSWERS LIST//////////-->
+
+        <!--//////////FOOTER//////////-->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <p>James Stewart - 1391333</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--//////////END FOOTER//////////-->
+        
+    </body>
+</html>

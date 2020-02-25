@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <title>Post Status Form</title>
+</head>
+    <body>
+<!--//////////NAVIGATION BAR//////////-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/logo4.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveNavlist">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse responsiveNavCollapse" id="responsiveNavlist">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="poststatusform.php">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="searchstatusform.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!--//////////END NAVIGATION BAR//////////-->
+
+    <main>
+<!--//////////FORM//////////-->
+        <div class="container-fluid">
+            <h1 class="title">Status Posting System</h1>
+
+            <form action="poststatusprocess.php" method="post">
+
+                <!--First Input Field-->
+                <div class="form-group row">
+                    <label class="col-auto col-form-label">Status Code (required):</label>
+                    <div class="col-sm-2 col-md-2">
+                        <input type="text" class="form-control" placeholder="S0001" maxlength="5" name="sCode" pattern="^[S].[0-9]{3,}" title="Input must only contain a captial 'S' followed by 4 numbers." required>
+                    </div>
+                </div>
+
+                <!--Second Input Field-->
+                <div class="form-group row">
+                    <label class="col-auto col-form-label">Status (required):</label>
+                    <div class="inputOffset col-sm-6 col-md-6">
+                        <input type="text" class="form-control" placeholder="Enter your status here..." name="status" pattern="[A-Za-z0-9 ,.!?]+" required>
+                    </div>
+                </div>
+
+                <br>
+
+                <!--Radio Buttons-->
+                <div class="form-group row text-nowrap">
+                    <div class="col-sm-3 col-md-2 col-lg-2 col-xl-1">
+                        Share:
+                    </div>
+                    
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1">
+                        <div class="radioButtons form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio1" name="share" value="Public" checked>
+                            <label for="radio1">Public</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3 col-md-2 col-lg-2 col-xl-1">
+                        <div class="radioButtons form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio2" name="share" value="Friends">
+                            <label for="radio2">Friends</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-1 col-lg-1">
+                        <div class="radioButtons form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio3" name="share" value="Only Me">
+                            <label for="radio3">Only Me</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Date Selector-->
+                <div class="form-group row text-nowrap">
+                    <div class="col-sm-3 col-md-2 col-lg-2 col-xl-1">
+                        Date:
+                    </div>
+                    
+                    <div class="col-auto">
+                        <input class="form-control" type="date" value="<?php echo date("Y-m-d");?>" name="date">
+                    </div>
+                    
+                </div>
+
+                <!--Checkboxe Input Field-->
+                <div class="form-group row text-nowrap">
+                    <div class="col-sm-3 col-md-2 col-lg-2 col-xl-1">
+                        Permission Type:
+                    </div>
+                
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1">
+                        <div class="radioButtons form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox1" name="permission[]" value="Allow Like">
+                            <label for="checkbox1">Allow Like</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-md-2 col-lg-2 col-xl-1">
+                        <div class="radioButtons form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox2" name="permission[]" value="Allow Comment">
+                            <label for="checkbox2">Allow Comment</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-1 col-lg-1">
+                        <div class="radioButtons form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox3" name="permission[]" value="Allow Share">
+                            <label for="checkbox3">Allow Share</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Submit and Reset Buttons-->
+                <div class="buttonOffset form-group row">
+                    <input class="postButton btn btn-primary" type="submit" value="Post">
+                    <input class="resetButton btn btn-secondary" type="reset" value="Reset">
+                </div>
+            </form>
+<!--//////////END FORM//////////-->
+            <a href="index.html">Return to Home Page</a>
+        </div>
+    </main>
+
+<!--//////////FOOTER//////////-->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <p>James Stewart - 1391333</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!--//////////END FOOTER//////////-->
+
+    </body>
+</html>
